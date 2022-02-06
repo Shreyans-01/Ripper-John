@@ -10,7 +10,7 @@ def crack_animals(_tab):
             return a
     return "Its not an animal"
 
-def import_chiffre(_tab):
+def import_figure(_tab):
     for c in range(9999):
         c = str(c)
         string = _tab[1].lower()+c
