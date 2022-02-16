@@ -10,6 +10,18 @@ def crack_animals(_tab):
             return a
     return "Its not an animal"
 
+def crack_celebs(_tab):
+    file = open("celebs.txt", "r",encoding="utf8")
+    content = file.read()
+    content = content.split("\n")
+    for a in content:
+        a = a.lower().replace(" ","")
+        h = hashlib.md5(a.encode()).hexdigest()
+        if h == _tab[2]:
+            return a
+    return "Its not a celeb"
+
+
 def import_figure(_tab):
     for c in range(9999):
         c = str(c)
