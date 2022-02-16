@@ -1,8 +1,8 @@
 import hashlib
 import functions
 
-string= "kanye2334"
+string = "pig101"
 h = hashlib.md5(string.encode()).hexdigest()
-something = ['','',h]
+something = ['', '', h]
 print(functions.crack_celebs(something))
 print(h)

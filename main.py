@@ -11,6 +11,7 @@ with open('list_names.csv', newline='', encoding='utf8') as csvfile:
 tab.pop(0)
 for i in tab:
     print("******")
+    print(i)
     a = functions.crack_animals(i)
     if a == "n":
         print("Password isnt based on an animal.")
@@ -23,10 +24,9 @@ for i in tab:
     else:
         print("Password is : ", a)
         continue
-    a= functions.import_figure(i)
+    a = functions.import_figure(i)
     if a == "n":
         print("Password isnt based on user's name.")
         print("Password not found :(")
     else:
         print("Password is : ", a)
-    
