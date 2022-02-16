@@ -8,10 +8,25 @@ with open('list_names.csv', newline='', encoding='utf8') as csvfile:
     ##print(f"a: {a}")
     for i in a:
         tab.append(i)
-        print(i)
 tab.pop(0)
 for i in tab:
     print("******")
-    print(functions.crack_animals(i))
-    print(functions.crack_celebs(i))
-    print(functions.import_figure(i))
+    a = functions.crack_animals(i)
+    if a == "n":
+        print("Password isnt based on an animal.")
+    else:
+        print("Password is : ", a)
+        continue
+    a = functions.crack_celebs(i)
+    if a == "n":
+        print("Password isnt based on a celeb.")
+    else:
+        print("Password is : ", a)
+        continue
+    a= functions.import_figure(i)
+    if a == "n":
+        print("Password isnt based on user's name.")
+        print("Password not found :(")
+    else:
+        print("Password is : ", a)
+    
